@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Meu blog tech</title>
+    <title>Blog Tech - São Tarcísio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1> Meu Blog Tech </h1>
-        <p> Vou compartilhar conhecimentos sobre educação e carreira</p>
-    </header>
-    <main>
-        <article>
-            <img src="" alt="">
-        </article>
-        <article></article>
-    </main>
-</body>
 
+    <!-- Cabeçalho com título e descrição do blog -->
+    <header>
+        <h1>Blog Tech: São Tarcísio</h1>
+        <p>Tecnologia, inovação e organização a serviço dos coroinhas e acólitos</p>
+    </header>
+
+    <!-- Área principal com os artigos -->
+    <main>
+        
+        <!-- Postagem 1 -->
+        <article>
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80" alt="Notebook e organização digital">
+            <div class="conteudo-artigo">
+                <h2>Automação de Escalas para Acólitos e Coroinhas</h2>
+                <p class="autor">Por: <strong>Equipe Tarcísio.tech</strong></p>
+                <p>Descubra como utilizar planilhas inteligentes e calendários compartilhados para organizar as missas da semana sem confusão nos grupos de mensagens.</p>
+                <div class="botoes">
+                    <button onclick="curtir(this)">Curtir (0)</button>
+                    <button onclick="compartilhar()">Compartilhar</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Postagem 2 -->
+        <article>
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=80" alt="Segurança digital e tecnologia">
+            <div class="conteudo-artigo">
+                <h2>São Tarcísio e a Ética na Era Digital</h2>
+                <p class="autor">Por: <strong>Lucas Silva (Acólito)</strong></p>
+                <p>Inspirados pela coragem do jovem mártir romano em proteger o que é sagrado, refletimos sobre responsabilidade, privacidade e combate à desinformação na internet.</p>
+                <div class="botoes">
+                    <button onclick="curtir(this)">Curtir (0)</button>
+                    <button onclick="compartilhar()">Compartilhar</button>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Primeira interação em JavaScript -->
+    <script>
+        function curtir(botao) {
+            let texto = botao.innerText;
+            let numero = parseInt(texto.match(/\d+/)[0]);
+            numero++;
+            botao.innerText = `Curtir (${numero})`;
+        }
+
+        function compartilhar() {
+            alert("Link do artigo sobre São Tarcísio copiado!");
+        }
+    </script>
+
+</body>
 </html>
